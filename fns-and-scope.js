@@ -5,16 +5,24 @@ var name = 'Tyler';
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
+  function isTyler(name){
+    if (name ==='Tyler'){
+      return true;
+    } else{
+      return false;
+    }
+  }
 
 //////////////////PROBLEM 2////////////////////
 
 
 //Create a function called getName that uses prompt() to prompt the user for their name, then returns the name.
 
-
   //Code Here
-
-
+function getName(){
+  return prompt("What's your name?");
+}
+getName('Leah')
 //////////////////PROBLEM 3////////////////////
 
 
@@ -23,7 +31,12 @@ var name = 'Tyler';
 //then alerts "Welcome, " plus whatever the users name is.
 
   //Code Here
+// function welcome(){
+//   alert('Welcome ' + getName());
+// }
+var welcome = () => alert('Welcome, ' + getName());
 
+// welcome();
 
 //////////////////PROBLEM 4////////////////////
 
@@ -33,8 +46,8 @@ var name = 'Tyler';
 //What is the difference between arguments and parameters?
 
   //Answer Here
-
-
+ 
+// parameter as something that is given to a function declaration and an argument is something that is passed when calling the function
 //////////////////PROBLEM 5////////////////////
 
 
@@ -43,7 +56,7 @@ var name = 'Tyler';
 
 
   //Answer Here
-
+  // false, 0, '', null, NaN, undefined
 
 
 //////////////////PROBLEM 6////////////////////
@@ -53,7 +66,9 @@ var name = 'Tyler';
 //Create a function called myName that returns your name
 
   //Code Here
-  
+ function myName(name) {
+   return 'Leah';
+ }
 
 
 //Now save the function definition of myName into a new variable called newMyName
@@ -61,6 +76,8 @@ var name = 'Tyler';
   //Code Here
 
 //Now alert the result of invoking newMyName
+var newMyName = myName;
+alert(myName());
 
 
 
@@ -71,9 +88,14 @@ var name = 'Tyler';
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
   //Code Here
-
+function outerFn(){
+  return function(){
+    return 'Leah';
+  }
+}
 //Now save the result of invoking outerFn into a variable called innerFn.
 
   //Code Here
-
+var innerFn =  outerFn();
 //Now invoke innerFn.
+innerFn();
